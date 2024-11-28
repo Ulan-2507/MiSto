@@ -15,8 +15,11 @@
     "jsx": "react-jsx",
 
     /* Linting */
-    "strict": true
+    "strict": true,
+
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": ["src"],
+  "include": ["src", "setupTest.ts"],
   "types": ["@vitest/browser/providers/playwright"],
+  "extends": "./tsconfig.paths.json",
 }

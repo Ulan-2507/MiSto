@@ -13,8 +13,11 @@
     "noEmit": true,
 
     /* Linting */
-    "strict": true
+    "strict": true,
+
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "include": ["vite.config.ts"],
   "types": ["@vitest/browser/providers/playwright"],
+  "extends": "./tsconfig.paths.json",
 }
