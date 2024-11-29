@@ -1,18 +1,17 @@
 import { fireEvent, screen } from '@testing-library/react';
-import { describe, it, expect} from 'vitest'
+import { describe, test, expect } from 'vitest';
 import { componentRender } from '@shared/lib/test/componentRender/componentRender';
 import { Counter } from './Counter';
 
-
 describe('Counter', () => {
-    it('test render', () => {
+    test('test render', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });
         expect(screen.getByTestId('value-title')).toHaveTextContent('10');
     });
 
-    it('increment', () => {
+    test('increment', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });
@@ -20,7 +19,7 @@ describe('Counter', () => {
         expect(screen.getByTestId('value-title')).toHaveTextContent('11');
     });
 
-    it('decrement', () => {
+    test('decrement', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });

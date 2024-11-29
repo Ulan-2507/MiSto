@@ -1,17 +1,19 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { RouterProvider } from 'react-router-dom';
+import { BrowserRouter } from 'react-router';
 
-import routes from '@app/routes';
 import { StoreProvider } from '@app/store';
 import '@app/styles/index.css';
+import { AppRouter } from '@app/routes';
 
 const root = createRoot(document.getElementById('root')!);
 
 root.render(
     <StrictMode>
-        <StoreProvider>
-            <RouterProvider router={routes} />
-        </StoreProvider>
+        <BrowserRouter>
+            <StoreProvider>
+                <AppRouter />
+            </StoreProvider>
+        </BrowserRouter>
     </StrictMode>,
 );

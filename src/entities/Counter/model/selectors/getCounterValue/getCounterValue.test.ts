@@ -1,9 +1,9 @@
 import { StateSchema } from '@app/store';
 import { getCounterValue } from './getCounterValue';
-import { describe, it, expect} from 'vitest'
+import { describe, test, expect } from 'vitest';
 
 describe('getCounterValue.test', () => {
-    it('', () => {
+    test('', () => {
         const state: DeepPartial<StateSchema> = {
             counter: { value: 10 },
         };

@@ -1,2 +1,1 @@
-export { default } from './routes';
-export * from './name';
+export { AppRouter } from './ui/AppRouter';
