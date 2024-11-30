@@ -5,6 +5,8 @@
     "rules": {
         "color-named": "never",
         "color-no-invalid-hex": true,
+        "value-keyword-case": null,
+        "no-descending-specificity": null,
 
         "declaration-empty-line-before": null,
         "declaration-block-no-redundant-longhand-properties": null,

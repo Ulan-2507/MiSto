@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react';
-import '../src/app/styles/index.scss';
+import { AppDecorator } from '../src/shared/config/storybook';
 
 const preview: Preview = {
     parameters: {
@@ -10,6 +10,8 @@ const preview: Preview = {
             },
         },
     },
+
+    decorators: [AppDecorator({})],
 };
 
 export default preview;

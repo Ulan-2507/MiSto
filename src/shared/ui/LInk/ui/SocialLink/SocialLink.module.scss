@@ -1,0 +1,58 @@
+.SocialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.transparent {
+    opacity: 0.8;
+
+    & svg {
+        fill: transparent;
+    }
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+
+        & svg {
+            fill: var(--dark);
+        }
+    }
+}
+
+.white {
+    opacity: 1;
+
+    & svg {
+        fill: var(--white);
+    }
+
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+
+        & svg {
+            fill: var(--grey);
+        }
+    }
+}
+
+.dark {
+    opacity: 0.7;
+
+    & svg {
+        fill: var(--dark);
+    }
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}

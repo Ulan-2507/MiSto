@@ -1,0 +1,63 @@
+.AppLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--dark);
+}
+
+.clear {
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+    }
+}
+
+.underline {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.8;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: 2px;
+        background-color: currentColor;
+        transform: scale(0);
+        transform-origin: 100% 50%;
+        transition: transform 0.25s ease-out;
+    }
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+
+        &::after {
+            transform: scale(1);
+            transform-origin: 0 50%;
+        }
+    }
+}
+
+.pill {
+    padding: 13px 24px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 4px;
+    line-height: 22px;
+    text-transform: uppercase;
+    background-color: var(--white);
+
+    &:hover,
+    &:focus {
+        background-color: var(--grey);
+    }
+}

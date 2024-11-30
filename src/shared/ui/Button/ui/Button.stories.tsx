@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './Button';
+import { DarkBgDecorator } from '@shared/config/storybook';
 
 const meta = {
     title: 'shared/Button',
@@ -42,22 +43,7 @@ export const outline: Story = {
         children: 'join us',
         variant: 'outline',
     },
-    decorators: [
-        Story => (
-            <div
-                style={{
-                    width: '500px',
-                    height: '100px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: '#121212',
-                }}
-            >
-                <Story />
-            </div>
-        ),
-    ],
+    decorators: [DarkBgDecorator],
 };
 export const partial: Story = {
     args: {
@@ -93,19 +79,5 @@ export const fullWidth: Story = {
         variant: 'light',
         fullWidth: true,
     },
-    decorators: [
-        Story => (
-            <div
-                style={{
-                    width: '500px',
-                    height: '100px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    border: '1px solid #121212',
-                }}
-            >
-                <Story />
-            </div>
-        ),
-    ],
+    decorators: [DarkBgDecorator],
 };

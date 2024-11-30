@@ -1,4 +1,4 @@
-export type { StateSchema } from './types/StateSchema';
+export type { StateSchema, ReducersList } from './types/StateSchema';
 
 export { StoreProvider } from './ui/StoreProvider';
 
