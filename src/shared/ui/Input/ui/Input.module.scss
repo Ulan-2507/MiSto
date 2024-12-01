@@ -1,0 +1,58 @@
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font: var(--font-xs);
+}
+
+.label {
+    text-transform: uppercase;
+}
+
+.input {
+    padding: 15px 16px;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    line-height: 18px;
+
+    &::placeholder {
+        opacity: 0.4;
+    }
+
+    &:hover::placeholder,
+    &:focus::placeholder {
+        opacity: 0.8;
+    }
+}
+
+.light {
+    color: var(--dark);
+
+    .input {
+        color: var(--dark);
+        background-color: var(--gr-white);
+
+        &::placeholder {
+            color: var(--dark);
+        }
+    }
+}
+
+.dark {
+    color: var(--white);
+
+    .input {
+        color: var(--white);
+        background-color: rgba(255, 255, 255, 20%);
+
+        &::placeholder {
+            color: var(--white);
+        }
+    }
+}
+
+.error {
+    color: var(--error-color);
+}
